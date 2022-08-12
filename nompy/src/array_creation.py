@@ -1,7 +1,7 @@
-import src._size as _size
-import src._shape as _shape
-import src._flatten as _flatten
-from src.ndarray import ndarray
+import nompy.src._size as _size
+import nompy.src._shape as _shape
+import nompy.src._flatten as _flatten
+from nompy.src.ndarray import ndarray
 
 
 def zeros(shape: list[int]):

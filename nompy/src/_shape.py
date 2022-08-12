@@ -1,4 +1,4 @@
-import src._size as _size
+from nompy.src import _size
 
 
 def compute_shape(data: list):
