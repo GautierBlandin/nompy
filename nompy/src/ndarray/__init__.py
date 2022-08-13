@@ -19,7 +19,9 @@ class ndarray:
             else:
                 self.dtype = int
 
-    from ._add_ import __add__
+    def __str__(self):
+        return f'data: {self.data}, shape: {self.shape}, step_sizes: {self.step_sizes}'
+
     from ._getitem_ import __getitem__
     from ._setitem_ import __setitem__
     from ._mul_ import __mul__
