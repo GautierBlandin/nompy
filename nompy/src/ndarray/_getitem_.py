@@ -8,7 +8,7 @@ def __getitem__(self: ndarray, pos):
     if type(pos) == int and len(self.shape) == 1:
         return self.data[pos]
 
-    if len(pos) == len(self.shape):
+    elif len(pos) == len(self.shape):
         index = 0
         for i, p in enumerate(pos):
             index += p * self.step_sizes[i]
