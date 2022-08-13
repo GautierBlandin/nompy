@@ -3,7 +3,7 @@ import nompy as np
 
 def test_reshape():
     A = np.array([[1, 2, 3], [4, 5, 6]])
-    A.reshape((3, 2))
+    A = A.reshape((3, 2))
 
     assert A.shape == (3, 2)
     assert A.size == 6
@@ -22,11 +22,11 @@ def test_reshape():
     except ValueError as e:
         pass
 
-    A.reshape([6])
+    A = A.reshape([6])
     assert A.shape == [6]
     assert A[0] == 1
     assert A[3] == 4
 
-    A.reshape((2, 1, 3))
+    A = A.reshape((2, 1, 3))
     assert A[0, 0, 0] == 1
     assert A[1, 0, 1] == 5
