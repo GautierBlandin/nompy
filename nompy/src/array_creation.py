@@ -1,10 +1,10 @@
 import nompy.src._size as _size
 import nompy.src._shape as _shape
 import nompy.src._flatten as _flatten
-from nompy.src.ndarray import ndarray
 
 
 def zeros(shape: list[int]):
+    from nompy.src.ndarray import ndarray
     """
     Creates a nompy array of zeros with the given shape.
     """
@@ -14,6 +14,7 @@ def zeros(shape: list[int]):
 
 
 def ones(shape: list[int]):
+    from nompy.src.ndarray import ndarray
     """
     Creates a nompy array of ones with the given shape.
     """
@@ -23,6 +24,7 @@ def ones(shape: list[int]):
 
 
 def array(data: list):
+    from nompy.src.ndarray import ndarray
     """
     Creates a nompy array with the given data and shape.
     """
