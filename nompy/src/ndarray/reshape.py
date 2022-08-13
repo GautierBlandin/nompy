@@ -15,8 +15,8 @@ def reshape(self: ndarray, shape):
         shape: The new shape of the array. Must be compatible with the current shape
             (i.e. the number of elements must remain the same).
     """
+    from nompy.src.ndarray import ndarray
     if _size.compute_size(shape) == self.size:
-        self.shape = shape
-        self.step_sizes = _shape.compute_step_size(shape)
+        return ndarray(shape, self.data)
     else:
         raise ValueError("Incompatible shape")
