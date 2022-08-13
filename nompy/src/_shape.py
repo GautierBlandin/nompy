@@ -36,3 +36,21 @@ def check_integrity(shape, data):
     if len(data) != size:
         raise ValueError("The data has the wrong size.")
     return True
+
+
+def iter_ndim_shape(shape):
+    pos = [0] * len(shape)
+    size = _size.compute_size(shape)
+    for _ in range(size):
+        yield pos
+        pos = _increment_pos(pos, shape)
+
+
+def _increment_pos(pos, shape):
+    for i in range(1, len(pos) + 1):
+        if pos[-i] < shape[-i] - 1:
+            pos[-i] += 1
+            break
+        elif pos[-i] == shape[-i] - 1:
+            pos[-i] = 0
+    return pos
