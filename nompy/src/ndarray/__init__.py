@@ -18,6 +18,7 @@ class ndarray:
                 self.dtype = type(data[0])
             else:
                 self.dtype = int
+        self.base = base
 
     def __str__(self):
         return f'data: {self.data}, shape: {self.shape}, step_sizes: {self.strides}'
