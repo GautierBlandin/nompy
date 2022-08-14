@@ -7,7 +7,7 @@ def test_reshape():
 
     assert A.shape == (3, 2)
     assert A.size == 6
-    assert A.step_sizes == [2, 1]
+    assert A.strides == [2, 1]
     assert A.data == [1, 2, 3, 4, 5, 6]
     assert A[0, 0] == 1
     assert A[0, 1] == 2
