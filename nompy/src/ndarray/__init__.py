@@ -23,8 +23,8 @@ class ndarray:
     def __str__(self):
         return f'data: {self.data}, shape: {self.shape}, step_sizes: {self.strides}'
 
-    from ._getitem_ import __getitem__
-    from ._setitem_ import __setitem__
+    from ._getitem_ import __getitem__, _get_from_1d_index
+    from ._setitem_ import __setitem__, _set_from_1d_index
     from ._matmul import __matmul__
     from .reshape import reshape
     from .broadcast import _get_actual_pos, _get_broadcast_item
