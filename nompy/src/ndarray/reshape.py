@@ -5,7 +5,6 @@ if TYPE_CHECKING:
 
 
 import nompy.src._size as _size
-import nompy.src._shape as _shape
 
 
 def reshape(self: ndarray, shape):
@@ -17,6 +16,6 @@ def reshape(self: ndarray, shape):
     """
     from nompy.src.ndarray import ndarray
     if _size.compute_size(shape) == self.size:
-        return ndarray(shape, self.data)
+        return ndarray(shape, self.data, base=self)
     else:
         raise ValueError("Incompatible shape")
