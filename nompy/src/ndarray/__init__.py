@@ -20,7 +20,7 @@ class ndarray:
                 self.dtype = int
 
     def __str__(self):
-        return f'data: {self.data}, shape: {self.shape}, step_sizes: {self.step_sizes}'
+        return f'data: {self.data}, shape: {self.shape}, step_sizes: {self.strides}'
 
     from ._getitem_ import __getitem__
     from ._setitem_ import __setitem__
